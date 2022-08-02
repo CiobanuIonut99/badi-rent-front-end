@@ -1,0 +1,16 @@
+.nav-bar {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-bar-pages {
+  width: 20%;
+}
+
+#home-page, #contact-page, #rent-page {
+  padding-left: 2em;
+}
+
+span:hover {
+  cursor: pointer;
+}
