@@ -17,6 +17,10 @@ import {RouterModule} from "@angular/router";
 import { AutoPageComponent } from './auto-page/auto-page.component';
 import { MotoPageComponent } from './moto-page/moto-page.component';
 import { AtvPageComponent } from './atv-page/atv-page.component';
+import { CardComponentComponent } from './card-component/card-component.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { AtvPageComponent } from './atv-page/atv-page.component';
     NavBarComponent,
     AutoPageComponent,
     MotoPageComponent,
-    AtvPageComponent
+    AtvPageComponent,
+    CardComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,10 @@ import { AtvPageComponent } from './atv-page/atv-page.component';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
