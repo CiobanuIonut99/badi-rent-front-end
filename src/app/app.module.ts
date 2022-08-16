@@ -14,6 +14,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {RouterModule} from "@angular/router";
+import { AutoPageComponent } from './auto-page/auto-page.component';
+import { MotoPageComponent } from './moto-page/moto-page.component';
+import { AtvPageComponent } from './atv-page/atv-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {RouterModule} from "@angular/router";
     HomePageComponent,
     ContactPageComponent,
     RentPageComponent,
-    NavBarComponent
+    NavBarComponent,
+    AutoPageComponent,
+    MotoPageComponent,
+    AtvPageComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,9 @@ import {RouterModule} from "@angular/router";
       {path: 'home', component: HomePageComponent},
       {path: 'rent', component: RentPageComponent},
       {path: 'contact', component: ContactPageComponent},
+      {path: 'cars', component: AutoPageComponent},
+      {path: 'motorcycles', component: MotoPageComponent},
+      {path: 'atvs', component: AtvPageComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: '**', redirectTo: 'home', pathMatch: 'full'}
     ]),
