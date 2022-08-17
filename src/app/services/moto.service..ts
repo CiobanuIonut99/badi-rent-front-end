@@ -11,7 +11,8 @@ export class MotoService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     })
   };
 
@@ -22,6 +23,12 @@ export class MotoService {
     return this.httpClient
       .get<MotoInterface>(this.motosURL)
       .pipe(retry(1), catchError(this.handleError));
+  }
+
+  getMoto(id: number): Observable<MotoInterface> {
+    console.log(id)
+    return this.httpClient.get<MotoInterface>(this.motosURL + "/" + id)
+      .pipe(retry(1), catchError(this.handleError))
   }
 
   private handleError(err: HttpErrorResponse) {

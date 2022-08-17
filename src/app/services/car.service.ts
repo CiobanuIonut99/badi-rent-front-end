@@ -11,7 +11,8 @@ export class CarService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     })
   };
 
@@ -22,6 +23,12 @@ export class CarService {
     return this.httpClient
       .get<CarInterface>(this.carsURL)
       .pipe(retry(1), catchError(this.handleError));
+  }
+
+  getCar(id: number): Observable<CarInterface> {
+    console.log(id)
+    return this.httpClient.get<CarInterface>(this.carsURL + "/" + id)
+      .pipe(retry(1), catchError(this.handleError))
   }
 
   private handleError(err: HttpErrorResponse) {
