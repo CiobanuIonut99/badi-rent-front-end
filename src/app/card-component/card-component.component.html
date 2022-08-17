@@ -1,0 +1,20 @@
+
+<mat-card class="container-class" *ngFor="let car of cars">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"><mat-icon>car_rental</mat-icon></div>
+    <mat-card-title>{{car.name}}</mat-card-title>
+    <mat-card-subtitle>{{car.brand}}</mat-card-subtitle>
+  </mat-card-header>
+<!--  <img id="image-card" mat-card-image  alt="Photo of a Shiba Inu">{{car.carImage}}-->
+  <img id="image-card" src="data:image/png;base64,{{car.carImage}}"/>
+  <mat-card-content>
+    <p id="paragraph-card">
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="button-container">
+    <button mat-button>Rent now</button>
+  </mat-card-actions>
+</mat-card>
