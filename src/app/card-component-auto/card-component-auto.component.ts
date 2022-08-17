@@ -3,19 +3,18 @@ import {AutoPageComponent} from "../auto-page/auto-page.component";
 
 @Component({
   selector: 'app-card-component',
-  templateUrl: './card-component.component.html',
-  styleUrls: ['./card-component.component.css']
+  templateUrl: './card-component-auto.component.html',
+  styleUrls: ['./card-component-auto.component.css']
 })
-export class CardComponentComponent implements OnInit {
+export class CardComponentAutoComponent implements OnInit {
 
-
-  cars: any = [];
+  cars: any = this.autoPageComponent.cars;
 
   constructor(private autoPageComponent: AutoPageComponent) {
   }
 
   ngOnInit(): void {
-    this.cars = this.autoPageComponent.cars;
+
   }
 
 }

@@ -1,0 +1,16 @@
+#image-card {
+  width: 100%;
+  height: 100%;
+}
+
+#paragraph-card {
+  width: 100%;
+  text-align: start;
+}
+
+.container-class {
+  border-bottom: 1px solid black;
+  width: 15%;
+  align-self: center;
+}
+

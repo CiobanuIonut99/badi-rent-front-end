@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ATVInterface} from "../interfaces/atv.interface";
+import {ATVService} from "../services/atv.service";
 
 @Component({
   selector: 'app-atv-page',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtvPageComponent implements OnInit {
 
-  constructor() { }
+  atvs: any = [];
 
-  ngOnInit(): void {
+  constructor(private atvService: ATVService) {
   }
 
+  ngOnInit(): void {
+    this.atvService.getAtvs().subscribe((data: ATVInterface) => {
+      console.log(data);
+      this.atvs = data;
+    })
+  }
 }

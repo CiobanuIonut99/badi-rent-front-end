@@ -17,10 +17,12 @@ import {RouterModule} from "@angular/router";
 import { AutoPageComponent } from './auto-page/auto-page.component';
 import { MotoPageComponent } from './moto-page/moto-page.component';
 import { AtvPageComponent } from './atv-page/atv-page.component';
-import { CardComponentComponent } from './card-component/card-component.component';
+import { CardComponentAutoComponent } from './card-component-auto/card-component-auto.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {HttpClientModule} from "@angular/common/http";
+import { CardComponentMotoComponent } from './card-component-moto/card-component-moto.component';
+import { CardComponentAtvComponent } from './card-component-atv/card-component-atv.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {HttpClientModule} from "@angular/common/http";
     AutoPageComponent,
     MotoPageComponent,
     AtvPageComponent,
-    CardComponentComponent
+    CardComponentAutoComponent,
+    CardComponentMotoComponent,
+    CardComponentAtvComponent
   ],
   imports: [
     BrowserModule,
