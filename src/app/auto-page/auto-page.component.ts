@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CarInterface} from "../interfaces/car.interface";
 import {CarService} from "../services/car.service";
+import {AutoDetailComponent} from "../auto-detail/auto-detail.component";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-auto-page',
@@ -10,8 +12,11 @@ import {CarService} from "../services/car.service";
 export class AutoPageComponent implements OnInit {
 
   cars: any = [];
+  id: any = this.autoDetailComponent.car.id;
 
-  constructor(private carService: CarService) {
+  constructor(private carService: CarService,
+              private autoDetailComponent: AutoDetailComponent,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {

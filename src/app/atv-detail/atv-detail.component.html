@@ -1,4 +1,4 @@
-<mat-card class="container-class" [routerLink]="['/atvs',atv.id]" *ngFor="let atv of atvs">
+<mat-card class="container-class" *ngIf="atv">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image">
       <mat-icon>car_rental</mat-icon>

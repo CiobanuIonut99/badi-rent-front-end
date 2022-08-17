@@ -1,8 +1,6 @@
-<mat-card class="container-class" [routerLink]="['/motos',moto.id]" *ngFor="let moto of motos">
+<mat-card class="container-class" *ngIf="moto">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image">
-      <mat-icon>sports_motorsports</mat-icon>
-    </div>
+    <div mat-card-avatar class="example-header-image"><mat-icon>car_rental</mat-icon></div>
     <mat-card-title>{{moto.name}}</mat-card-title>
     <mat-card-subtitle>{{moto.brand}}</mat-card-subtitle>
   </mat-card-header>
@@ -15,6 +13,6 @@
 
   </mat-card-content>
   <mat-card-actions class="button-container">
-    <button mat-button>Rent now</button>
+    <button class="rent-button" mat-button>Rent now</button>
   </mat-card-actions>
 </mat-card>

@@ -8,6 +8,7 @@
 
 .home {
   background-image: url('src/assets/image/car1-photo.jpg');
+  /*background-image: linear-gradient(#455d7a, #233142);*/
   width: 100%;
   height: 100%;
   background-position: center;
