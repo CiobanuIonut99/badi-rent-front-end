@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {CarService} from "../services/car.service";
-import {Router} from "@angular/router";
 import {CarInterface} from "../interfaces/car.interface";
+import {CarService} from "../services/car.service";
 
 @Component({
   selector: 'app-auto-page',
@@ -12,8 +11,7 @@ export class AutoPageComponent implements OnInit {
 
   cars: any = [];
 
-  constructor(private carService: CarService,
-              private router: Router) {
+  constructor(private carService: CarService) {
   }
 
   ngOnInit(): void {

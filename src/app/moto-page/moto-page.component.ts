@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MotoInterface} from "../interfaces/moto.interface";
+import {MotoService} from "../services/moto.service.";
 
 @Component({
   selector: 'app-moto-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MotoPageComponent implements OnInit {
 
-  constructor() { }
+  motos: any = [];
+
+  constructor(private motoService: MotoService) { }
 
   ngOnInit(): void {
+    this.motoService.getMotos().subscribe((data: MotoInterface) => {
+      console.log(data);
+      this.motos = data;
+    })
   }
-
 }

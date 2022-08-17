@@ -1,0 +1,18 @@
+<mat-card class="container-class" *ngFor="let atv of atvs">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"><mat-icon>car_rental</mat-icon></div>
+    <mat-card-title>{{atv.name}}</mat-card-title>
+    <mat-card-subtitle>{{atv.brand}}</mat-card-subtitle>
+  </mat-card-header>
+  <img id="image-card" src="data:image/png;base64,{{atv.atvImage}}"/>
+  <mat-card-content>
+    <div>
+      <p class="paragraph-card">Rent price: {{atv.rentPrice}}</p>
+      <p class="paragraph-card">Insurance: {{atv.insurancePrice}}</p>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions class="button-container">
+    <button mat-button>Rent now</button>
+  </mat-card-actions>
+</mat-card>
